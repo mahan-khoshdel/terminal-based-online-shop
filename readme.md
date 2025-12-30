@@ -217,166 +217,263 @@ Customer purchases an item → order is created → stored for both customer and
 | `discount_code` | Discount code applied to the order, if any. |
 ---
 ## Methods
-This section describes the constructor (`__init__`) methods defined in each class.
-In this step, constructors are used to create relationships between entities and initialize object properties.
+This section describes the constructor (`__init__`) and string representation (`__str__`) methods defined in each class.
+In this step, constructors are used to create relationships between entities and initialize object properties, while `__str__` provides a readable string representation of the objects.
 No business logic methods have been implemented yet.
 
 ---
 ### **Item**
-#### `__init__(number, type, price)`
-Initializes a seller-specific product item.
 
-**Parameters:**
-* `number` *(int)*: The number of items available.
-* `type` *(Product)*: Reference to the related product.
-* `price` *(int)*: The unit price is defined by the seller.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `number, type, price` | Initializes item quantity, product reference, and unit price. |
+| `__str__()` | — | Returns a readable string of the item. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `number` | Quantity of product. |
+| `type` |  Reference to the related `Product`. |
+| `price` | The unit price set by seller. |
+
+**`__init__` Purpose:**
 Creates an item instance that associates a product with seller-specific pricing and inventory information.
 
 ---
 ### **Seller**
-#### `__init__(products, place, score, order_list, wallet, statistics, user_number)`
-Initializes a seller entity.
 
-**Parameters:**
-* `products` *(list[Item])*: Items provided by the seller.
-* `place` *(str)*: Seller’s physical location.
-* `score` *(int)*: Seller rating.
-* `order_list` *(list[Orderlist])*: Orders related to this seller.
-* `wallet` *(int)*: Seller wallet balance.
-* `statistics` *(int)*: Sales statistics.
-* `user_number` *(str)*: Unique seller identifier.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `products, place, score, order_list, wallet, statistics, user_number` | Creates a seller account. |
+| `__str__()` | — | Returns seller information in string format. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `products` | List of seller Items. |
+| `place` | Seller location. |
+| `score` | Seller rating. |
+| `order_list` | List of orders. |
+| `wallet` | Seller wallet balance. |
+| `statistics` | Sales statistics. |
+| `user_number` | Seller unique identifier. |
+
+
+**`__init__` Purpose:**
 Creates a seller with product catalog, financial data, and performance metrics.
 
 ---
 ### **Transaction**
-#### `__init__(time, tracking_number, amount)`
-Initializes a financial transaction.
 
-**Parameters:**
-* `time` *(datetime)*: Date and time of the transaction.
-* `tracking_number` *(int)*: Transaction tracking code.
-* `amount` *(int)*: Transaction amount (positive or negative).
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `time, tracking_number, amount` | Creates a transaction record. |
+| `__str__()` | — | Returns transaction details as string. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `time` | Date and time of transaction. |
+| `tracking_number` | Unique tracking code. |
+| `amount` | Transaction amount (positive or negative). |
+
+**`__init__` Purpose:**
 Represents a single financial transaction in a wallet.
 
 ---
 ### **Wallet**
-#### `__init__(code, transactions)`
-Initializes a wallet.
 
-**Parameters:**
-* `code` *(int)*: Unique wallet identifier.
-* `transactions` *(list[Transaction])*: List of transactions.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `code, transactions` | Creates a wallet with transaction history. |
+| `__str__()` | — | Returns wallet info as string. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `code` | Wallet identifier. |
+| `transactions` | List of wallet transactions. |
+
+**`__init__` Purpose:**
 Creates a digital wallet that stores transaction history.
 
 ---
 ### **Customer**
-#### `__init__(name, family, id, shopping_basket, wallet)`
-Initializes a customer account.
 
-**Parameters:**
-* `name` *(str)*: Customer first name.
-* `family` *(str)*: Customer last name.
-* `id` *(str)*: Unique customer identifier.
-* `shopping_basket` *(list[Shoppingbasket])*: Customer’s shopping basket.
-* `wallet` *(Wallet)*: Associated wallet.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `name, family, id, shopping_basket, wallet` | Creates a customer profile. |
+| `__str__()` | — | Returns customer details as string. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `name` | Customer first name. |
+| `family` | Customer last name. |
+| `id` | Unique customer identifier. |
+| `shopping_basket` | Basket items. |
+| `wallet` | Wallet instance. |
+
+**`__init__` Purpose:**
 Creates a customer with identity, basket, and wallet data.
 
 ---
 ### **Comment**
-#### `__init__(context, time, user)`
-Initializes a product comment.
 
-**Parameters:**
-* `context` *(str)*: Comment text.
-* `time` *(datetime)*: Comment submission time.
-* `user` *(Customer)*: Author of the comment.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `context, time, user` | Creates a product comment. |
+| `__str__()` | — | Returns comment as string. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `context` | Comment text. |
+| `time` | Comment date. |
+| `user` | Author of the comment. |
+
+**`__init__` Purpose:**
 Stores customer feedback related to a product.
 
 ---
 ### **Product**
-#### `__init__(id, comments)`
-Initializes a product.
 
-**Parameters:**
-* `id` *(str)*: Unique product identifier.
-* `comments` *(list[Comment])*: Product comments.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `id, comments` | Creates a product. |
+| `__str__()` | — | Returns product info as string. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `id` | Product unique identifier. |
+| `comments` | Product comments. |
+
+**`__init__` Purpose:**
 Creates a product entity independent of sellers.
 
 ---
 ### **Discountcode**
-#### `__init__(time, customers, product, limit)`
-Initializes a discount code.
 
-**Parameters:**
-* `time` *(datetime)*: Expiration or activation date.
-* `customers` *(list[Customer])*: Eligible customers.
-* `product` *(Product)*: Target product (optional).
-* `limit` *(int)*: Usage limit.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `time, customers, product, limit` | Creates discount code. |
+| `__str__()` | — | Returns discount code info. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `time` | Expiration or activation date. |
+| `customers` | Allowed customers. |
+| `product` | Target product. |
+| `limit` | Usage limit. |
+
+**`__init__` Purpose:**
 Defines a promotional discount with limitations.
 
 ---
 ### **Shoppingbasket**
-#### `__init__(number, product, price, discount_codes)`
-Initializes a shopping basket entry.
 
-**Parameters:**
-* `number` *(int)*: Selected quantity.
-* `product` *(Seller)*: Seller providing the item.
-* `price` *(Item)*: Selected item.
-* `discount_codes` *(list[Discountcode])*: Discount codes applied.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `number, product, price, discount_codes` | Creates basket entry. |
+| `__str__()` | — | Returns basket data as string. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `number` | Selected quantity. |
+| `product` | Seller providing the item. |
+| `price` | Related Item. |
+| `discount_codes` | Applied discount codes. |
+
+**`__init__` Purpose:**
 This represents a temporary purchase option before payment.
 
 ---
 ### **Shop**
-#### `__init__(sellers, products, customers, discount_codes)`
-Initializes the shop container.
 
-**Parameters:**
-* `sellers` *(list[Seller])*: Registered sellers.
-* `products` *(list[Product])*: Available products.
-* `customers` *(list[Customer])*: Registered customers.
-* `discount_codes` *(list[Discountcode])*: Active discount codes.
+### Methods
 
-**Purpose:**
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `sellers, products, customers, discount_codes` | Initializes shop container. |
+| `__str__()` | — | Returns shop info as string. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `sellers` | All sellers. |
+| `products` | All products. |
+| `customers` | All customers. |
+| `discount_codes` | All discount codes. |
+
+**`__init__` Purpose:**
 It acts as the central structure that holding all the system data.
 
 ---
 ### **Orderlist**
-#### `__init__(id, seller, item, order_time, discount_code)`
-Initializes a completed order.
 
-**Parameters:**
-* `id` *(str)*: Order identifier.
-* `seller` *(Seller)*: The seller is processing the order.
-* `item` *(Item)*: Purchased item.
-* `order_time` *(datetime)*: Order timestamp.
-* `discount_code` *(Discountcode)*: Discount code applied.
-  
-**Purpose:**.
+### Methods
+
+| Method | Parameters | Description |
+|--------|-----------|-------------|
+| `__init__()` | `id, sellers, item, order_time, discount_code` | Creates order record. |
+| `__str__()` | — | Returns order info as string. |
+
+#### `__init__` Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| `id` | Order identifier. |
+| `sellers` | Seller responsible. |
+| `item` | Purchased item. |
+| `order_time` | Time of order. |
+| `discount_code` | Applied discount code. |
+
+**`__init__` Purpose:**.
 
 It represents a completed purchase and serves as an order record.
 
 ---
-### Future Extension
-Additional methods such as checkout, payment processing, discount requests, and order management can be implemented in later stages of development.
+### Possible Future Extensions
+
+This data model currently focuses on the core structural representation.
+In future stages, this system could be extended with:
+
+- Implementing full business logic such as checkout, payment processing, and refund management
+- Adding order status tracking and delivery workflow
+- Connecting to persistent storage (database integration)
+- Developing a graphical or web-based user interface
+- Applying role-based access control and authentication
 
 ---
 # Menu System
