@@ -231,13 +231,13 @@ while True:
         print("5.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Showing all registered sellers...")
         if cmd == 2:
-            pass
+            print("Seller confirmation process started.")
         if cmd == 3:
-            pass
+            print("Seller has been blocked.")
         if cmd == 4:
-            pass
+            print("Seller removed from system.")
         if cmd == 5:
             level = "operator"
 
@@ -249,13 +249,13 @@ while True:
         print("5.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Showing all registered customers...")
         if cmd == 2:
-            pass
+            print("Customer confirmation completed.")
         if cmd == 3:
-            pass
+            print("Customer blocked.")
         if cmd == 4:
-            pass
+            print("Customer removed from system.")
         if cmd == 5:
             level = "operator"
 
@@ -266,11 +266,11 @@ while True:
         print("4.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Displaying all system orders...")
         if cmd == 2:
-            pass
+            print("Order cancellation requested.")
         if cmd == 3:
-            pass
+            print("Order search started.")
         if cmd == 4:
             level = "operator"
 
@@ -281,11 +281,11 @@ while True:
         print("4.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Creating a new discount code...")
         if cmd == 2:
-            pass
+            print("Discount code removed.")
         if cmd == 3:
-            pass
+            print("Displaying all discount codes...")
         if cmd == 4:
             level = "operator"
 
@@ -297,13 +297,13 @@ while True:
         print("5.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("System statistics are being calculated...")
         if cmd == 2:
-            pass
+            print("System backup created.")
         if cmd == 3:
-            pass
+            print("System data restored.")
         if cmd == 4:
-            pass
+            print("System reset successfully.")
         if cmd == 5:
             level = "operator"
 
@@ -333,13 +333,13 @@ while True:
         print("5.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Displaying your items...")
         if cmd == 2:
-            pass
+            print("Add new item process started.")
         if cmd == 3:
-            pass
+            print("Edit item process started.")
         if cmd == 4:
-            pass
+            print("Item removed.")
         if cmd == 5:
             level = "seller"
 
@@ -350,11 +350,11 @@ while True:
         print("4.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Showing current orders...")
         if cmd == 2:
-            pass
+            print("Showing completed orders...")
         if cmd == 3:
-            pass
+            print("Order cancellation sent.")
         if cmd == 4:
             level = "seller"
 
@@ -365,11 +365,11 @@ while True:
         print("4.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Your current balance is displayed.")
         if cmd == 2:
-            pass
+            print("Withdraw request submitted.")
         if cmd == 3:
-            pass
+            print("Transaction history displayed.")
         if cmd == 4:
             level = "seller"
 
@@ -380,11 +380,11 @@ while True:
         print("4.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Total sales calculated.")
         if cmd == 2:
-            pass
+            print("Total income calculated.")
         if cmd == 3:
-            pass
+            print("Most sold product identified.")
         if cmd == 4:
             level = "seller"
 
@@ -416,11 +416,11 @@ while True:
         print("4.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Showing all products...")
         if cmd == 2:
-            pass
+            print("Product search started.")
         if cmd == 3:
-            pass
+            print("Displaying product comments...")
         if cmd == 4:
             level = "customer"
 
@@ -434,17 +434,17 @@ while True:
         print("7.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Current basket displayed.")
         if cmd == 2:
-            pass
+            print("Item added to basket.")
         if cmd == 3:
-            pass
+            print("Item removed from basket.")
         if cmd == 4:
-            pass
+            print("Basket item quantity updated.")
         if cmd == 5:
-            pass
+            print("Discount code applied.")
         if cmd == 6:
-            pass
+            print("Basket cleared.")
         if cmd == 7:
             level = "customer"
 
@@ -456,13 +456,13 @@ while True:
         print("5.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Wallet charged successfully.")
         if cmd == 2:
-            pass
+            print("Withdraw request sent.")
         if cmd == 3:
-            pass
+            print("Current wallet balance displayed.")
         if cmd == 4:
-            pass
+            print("Wallet transaction history shown.")
         if cmd == 5:
             level = "customer"
 
@@ -474,13 +474,13 @@ while True:
         print("5.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Displaying current orders...")
         if cmd == 2:
-            pass
+            print("Displaying completed orders...")
         if cmd == 3:
-            pass
+            print("Order cancellation requested.")
         if cmd == 4:
-            pass
+            print("Order details displayed.")
         if cmd == 5:
             level = "customer"
 
@@ -491,10 +491,10 @@ while True:
         print("4.back")
         cmd = int(input(">>"))
         if cmd == 1:
-            pass
+            print("Profile information displayed.")
         if cmd == 2:
-            pass
+            print("Profile edit mode enabled.")
         if cmd == 3:
-            pass
+            print("Password change requested.")
         if cmd == 4:
             level = "customer"
