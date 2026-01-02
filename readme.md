@@ -217,8 +217,8 @@ Customer purchases an item → order is created → stored for both customer and
 | `discount_code` | Discount code applied to the order, if any. |
 ---
 ## Methods
-This section describes the constructor (`__init__`) and string representation (`__str__`) methods defined in each class.
-Constructors are used to create relationships between entities and initialize object properties, while `__str__` provides a readable string representation of the objects.
+This section describes the constructor (`__init__`) and string representation (`__str__`) methods defined in each class.\
+Constructors are used to create relationships between entities and initialize object properties, while `__str__` provides a readable string representation of the objects.\
 At the current level of development, no full business logic methods (such as checkout, payment processing, or order lifecycle management) have been implemented yet.
 
 ---
