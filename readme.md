@@ -218,8 +218,8 @@ Customer purchases an item → order is created → stored for both customer and
 ---
 ## Methods
 This section describes the constructor (`__init__`) and string representation (`__str__`) methods defined in each class.
-In this step, constructors are used to create relationships between entities and initialize object properties, while `__str__` provides a readable string representation of the objects.
-No business logic methods have been implemented yet.
+Constructors are used to create relationships between entities and initialize object properties, while `__str__` provides a readable string representation of the objects.
+At the current level of development, no full business logic methods (such as checkout, payment processing, or order lifecycle management) have been implemented yet.
 
 ---
 ### **Item**

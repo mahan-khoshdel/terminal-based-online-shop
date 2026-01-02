@@ -10,7 +10,7 @@ class Item:
         self.number = number
         self.type = type
         self.price = price
-        
+
     def __str__(self):
         return f"number:{self.number},type:{self.type},price:{self.price}"
 
@@ -32,7 +32,7 @@ class Seller:
         self.wallet = wallet
         self.statistics = statistics
         self.user_number = user_number
-        
+
     def __str__(self):
         return f"products:{self.products},place:{self.place},score:{self.score},order_list:{self.order_list},wallet:{self.wallet},statistics:{self.statistics},user_number:{self.user_number}"
 
@@ -46,7 +46,7 @@ class Transaction:
         self.time = time
         self.tracking_number = tracking_number
         self.amount = amount
-        
+
     def __str__(self):
         return f"time:{self.time},tracking_number:{self.tracking_number},amount:{self.amount}"
 
@@ -58,7 +58,7 @@ class Wallet:
     def __init__(self, code, transactions):
         self.code = code
         self.transactions = transactions
-        
+
     def __str__(self):
         return f"code:{self.code},transactions:{self.transactions}"
 
@@ -76,7 +76,7 @@ class Customer:
         self.id = id
         self.shopping_basket = shopping_basket
         self.wallet = wallet
-        
+
     def __str__(self):
         return f"name:{self.name},family:{self.family},id:{self.id},shopping_basket:{self.shopping_basket},wallet:{self.wallet}"
 
@@ -90,10 +90,9 @@ class Comment:
         self.context = context
         self.time = time
         self.user = user
-        
+
     def __str__(self):
         return f"context:{self.context},time:{self.time},user:{self.user}"
-
 
 
 class Product:
@@ -103,7 +102,7 @@ class Product:
     def __init__(self, id, comments):
         self.id = id
         self.comments = comments
-        
+
     def __str__(self):
         return f"id:{self.id},comments:{self.comments}"
 
@@ -119,7 +118,7 @@ class Discountcode:
         self.customers = customers
         self.product = product
         self.limit = limit
-        
+
     def __str__(self):
         return f"time:{self.time},customers:{self.customers},product:{self.product},limit:{self.limit}"
 
@@ -135,7 +134,7 @@ class Shoppingbasket:
         self.product = product
         self.price = price
         self.discount_codes = discount_codes
-        
+
     def __str__(self):
         return f"number:{self.number},product:{self.product},price:{self.price},discount_codes:{self.discount_codes}"
 
@@ -151,7 +150,7 @@ class Shop:
         self.products = products
         self.customers = customers
         self.discount_codes = discount_codes
-        
+
     def __str__(self):
         return f"sellers:{self.sellers},products:{self.products},customers:{self.customers},discount_codes:{self.discount_codes}"
 
@@ -169,7 +168,7 @@ class Orderlist:
         self.item = item
         self.order_time = order_time
         self.discount_code = discount_code
-        
+
     def __str__(self):
         return f"id:{self.id},sellers:{self.sellers},item:{self.item},order_time:{self.order_time},discount_code:{self.discount_code}"
 
